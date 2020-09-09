@@ -1,0 +1,126 @@
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('images/aircraft1.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="text-dark">EPIC AIRLINE</h3>
+            <p>Welcome to Epic Airline</p>
+          </div>
+        </div>
+
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('images/aircraft2.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>EPIC AIRLINE</h3>
+            <p>Let's make your journey a wonderful one</p>
+          </div>
+        </div>
+
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('images/aircraft3.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>EPIC AIRLINE</h3>
+            <p>making your flight enjoyable is our utmost</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</header>
+    <div class="card">
+      <div class="card-header">SEARCH FLIGHT</div>
+      <div class="card-body">
+      <form action="/" method="post">
+            
+                <div class="form-group">
+                  <label for="takeoffpoint">From</label>
+                  <select name='takeoffpoint' class="form-control">
+                    <option value="">-- Select State--</option>
+                     {{#each data}}
+                 <option value='{{takeoffpoint}}'>{{takeoffpoint}}</option>
+                 {{/each}}
+                  </select>
+                </div>
+      
+                <div class="form-group">
+                  <label for="landingpoint">To</label>
+                  <select name='landingpoint'  class="form-control">
+                    <option value="">-- Select State--</option>
+                     {{#each data}}
+                    <option value='{{landingpoint}}'>{{landingpoint}}</option>
+                     {{/each}}
+                  </select>
+                </div>
+                  
+                <div class="form-group">
+                  <label for="takeofftime">Departure</label>
+                  <input type="datetime-local" name="takeofftime" id="" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <input type="submit" class="btn btn-block btn-outline-secondary" value="Search Flight">
+                </div>
+              </form>
+            </div>
+              </div>
+
+
+  
+    <div class="container-fluid bg-light p-5">
+
+      <div class="row mt-3 mb-3">
+
+        <div class="col-12">
+          <h1 class="text-center">Top Destination</h1>
+        </div>
+
+      </div>
+
+      <div class="row mb-3 destination-img">
+
+        <div class="col-4">
+          <img src="/images/dubai.jpg" class="img-fluid img-thumbnail">
+        </div>
+
+        <div class="col-4">
+          <img src="/images/trv 2.jpg" class="img-fluid img-thumbnail">
+        </div>
+
+        <div class="col-4">
+          <img src="/images/italy.jpg" class="img-fluid img-thumbnail">
+        </div>
+
+      </div>
+
+      <div class="row mb-3 destination-img">
+
+        <div class="col-4">
+          <img src="/images/UK.jpg" class="img-fluid img-thumbnail">
+        </div>
+
+        <div class="col-4">
+          <img src="/images/destination3.jpg" class="img-fluid img-thumbnail">
+        </div>
+
+        <div class="col-4">
+          <img src="images/destination1.jpg" class="img-fluid img-thumbnail">
+        </div>
+
+      </div>
+
+    </div>

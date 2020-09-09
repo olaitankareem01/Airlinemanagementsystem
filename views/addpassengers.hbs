@@ -1,0 +1,60 @@
+<h3>Fill the form below to book flight</h3>
+
+
+
+<form method="POST" action='/managebookings/create'>
+     
+    <div class="row">
+        <div class="col-md-8">
+             <div class="card">
+                 <div class="card-header text-center">
+                       BOOK FLIGHT
+                 </div>
+                 <div class="card-body">
+               <div class="form-group">
+                <input class="form-control"  name='ID' type='hidden'>
+              </div>
+              <div class="form-group">
+               <label>FIRST NAME</label> <input class="form-control"  name='firstname' type='text'>
+              </div>
+              <div class="form-group">
+               <label>LAST NAME</label>
+                <input class="form-control" name='lastname' type='text'>
+              </div>
+               <div class="form-group">
+                <label>EMAIL</label>
+                 <input class="form-control"  name='email' type="email" required>
+               </div>
+              <div class="form-group">        
+              <label>AGE</label> <input class="form-control"  name='age' type='number' required>
+              </div>
+               <div class="form-group">        
+              <label>SEX</label>
+                <select class="form-control" name='sex' >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+               </div>
+              <div class="form-group">
+                <label>PHONE NO</label> <input class="form-control" name='phone_no' type='tel' required>
+               </div>
+            <div class="form-group">
+             <label>SEAT NO</label>
+             <input class="form-control" name='seatno' type='number'>
+            </div>
+             <div class="form-group">
+             <input name='passenger_id' class="form-control" type="hidden">
+             </div>
+             <div class="form-group">
+             
+             <input name='flight_id' class="form-control" type="hidden">
+              
+             </div>
+               <div class="text-center">
+               <button class="btn btn-primary" type="submit">Save</button>
+               </div>
+             </div>
+            </div>
+        </div>
+    </div>
+</form>

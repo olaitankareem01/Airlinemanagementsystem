@@ -1,0 +1,45 @@
+<h3>Fill the form below to create booking</h3>
+
+<form method="POST" action='create'>
+ <div class="row">
+     <div class="col-md-6">
+         
+          <div class="form-group">
+              <label>Booking ID</label>
+             <input class="form-control" name='bookingid' type='text'>
+         </div>
+        <div class="form-group">
+             <label>Booker's name</label> 
+             <input  class="form-control"name='bookersname' type="text">
+         </div>
+
+     </div>
+     <div class="col-md-6">
+
+          <div class="form-group">
+           
+             <label>Flight ID</label>
+             <select name='flight_id' class="form-control">
+                 {{#each data}}
+                 <option value='{{ID}}'>{{flightno}}</option>
+                 {{/each}}
+             </select>
+         </div>
+          <div class="form-group">
+            <label>seat no</label>
+             <input class="form-control" name='seatno' type='number'>
+         </div>
+     </div>
+       <div class="text-center">
+            <button class="btn btn-primary" type="submit">save</button>
+        </div>
+     </div>
+
+</form>
+
+
+
+
+
+
+

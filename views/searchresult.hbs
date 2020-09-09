@@ -1,0 +1,26 @@
+<h3 class="text-center">Your Search Result:</h3>
+
+ <div class="container">
+<table class="table table-responsive table-striped table-bordered">
+ <thead>
+     <th>ID</th>
+     <th>FLIGHT NO</th>
+      <th>FROM</th>
+       <th>TO</th>
+       <th>TAKE-OFF TIME</th>
+       <th colspan="3">ACTION</th>
+ </thead>
+ <tbody>
+    <tr>
+     <td>{{ID}}</td>
+     <td> {{flightno}}</td>
+     <td>{{takeoffpoint}} </td>
+     <td> {{landingpoint}} </td>
+     <td>{{takeofftime}}</td> 
+     <td> <a class="btn btn-sm btn-warning" href="/manageflights/update/{{ID}}">Edit</a></td>
+     <td><a class="btn btn-sm btn-danger" href="/manageflights/delete/{{ID}}">Delete</a></td>
+     <td><a class="btn btn-sm btn-success" href="/managebookings/create">Book</a></td>
+    </tr>
+ </tbody>
+</table>
+ </div>

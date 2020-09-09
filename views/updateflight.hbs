@@ -1,0 +1,35 @@
+<h3>Edit the form below to update flight</h3>
+
+<form method="POST" action='/manageflights/update'>
+     <input type="hidden" name='ID' value="{{ID}}">
+ <div class="row">
+     <div class="col-md-6">
+         <div class="form-group">
+             <label>flightno</label> 
+             <input  class="form-control" value="{{flightno}}"name='flightno' type='number'>
+         </div>
+         
+          <div class="form-group">
+             <label>Take-off point</label> 
+             <input  class="form-control" value="{{takeoffpoint}}"name='takeoffpoint' type='text'>
+         </div>
+     </div>
+     <div class="col-md-6">
+         <div class="form-group">
+             <label>Take-off Time</label> 
+             <input  class="form-control"value="{{takeofftime}}" name='takeofftime' type='text'>
+         </div>
+          <div class="form-group">
+             <label>Landing point</label> 
+             <input  class="form-control" value="{{landingpoint}}" name='landingpoint' type='text'>
+         </div>
+          <div class="form-group">
+             <label>Aircraft Id</label> 
+             <input  class="form-control"value="{{aircraft_id}}" name='aircraft_id' type='number'>
+         </div>
+     </div>
+     </div>
+      <div class="text-center">
+            <button class="btn btn-primary" type="submit">update</button>
+        </div>
+</form>
