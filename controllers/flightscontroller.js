@@ -48,6 +48,12 @@ router.get('/flights', async function(req,res){
     let result = await flightmanager.list();
     res.render('listflights', {data : result[0]});
 });
+router.get('/bookstage1/:ID', async function(req,res){
+    let ID = req.params.ID;
+    let flight= await flightmanager.find(ID);
+    res.render('bkflightstage1', flight);
+});
+
 router.post('/manageflights/create',function(req,res){
     let flightno = req.body.flightno;
     let takeoffpoint = req.body.takeoffpoint;

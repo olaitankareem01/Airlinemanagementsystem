@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Home - Epic Airline</title>
-      <link rel='stylesheet' type='text/css' href="/css/bootstrap.min.css">
-      <link rel='stylesheet' type='text/css' href="/css/modern-business.css">
-    </head>
-    <body>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 
-        <div class="container">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home - Epic Airline</title>
+  <link rel='stylesheet' type='text/css' href="/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' href="/css/modern-business.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+  <script src="/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
 
       <a class="navbar-brand" href="/flights">
         Explore
       </a>
 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
 
         <ul class="navbar-nav ml-auto">
-           {{#if isLoggedIn}}
-           <li class="nav-item">
+          {{#if isLoggedIn}}
+          <li class="nav-item">
             <a class="nav-link" href="#">{{name}}</a>
           </li>
           {{else}}
@@ -36,95 +43,70 @@
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"  
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Flights</a>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Flights</a>
 
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/managebookings/create">Book flight</a>
-                <a class="dropdown-item" href="/flights"> flights list</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/manageflights/create">create flight</a>
-                <a class="dropdown-item" href="/">Search flight</a>
-              </div>
-            </li>
-              <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"  
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Bookings</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/managebookings/create">Book flight</a>
+              <a class="dropdown-item" href="/flights"> flights list</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/manageflights/create">create flight</a>
+              <a class="dropdown-item" href="/">Search flight</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Bookings</a>
 
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/managebookings/list">All Bookings</a>
-                <div class="dropdown-divider"></div>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"  
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Aircrafts</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/managebookings/list">All Bookings</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Aircrafts</a>
 
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/aircrafts">All Aircraft</a>
-                 <a class="dropdown-item" href="/manageaircrafts/create">create Aircraft</a>
-                <div class="dropdown-divider"></div>
-              </div>
-            </li>
-             <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"  
-                aria-haspopup="true"
-                aria-expanded="false"
-                >passengers</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/aircrafts">All Aircraft</a>
+              <a class="dropdown-item" href="/manageaircrafts/create">create Aircraft</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">passengers</a>
 
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/passengers">passengers list</a>
-                <div class="dropdown-divider"></div>
-              </div>
-            </li>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/passengers">passengers list</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">logout</a>
+          </li>
         </ul>
-        </div>
-        </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
-      <main class="container">
-        {{{body}}}
-      </main>
-        
+  {{{body}}}
 
-      <footer class="fixed-bottom bg-dark">
-        <div class="container">
-          <p class="m-0 text-center text-white">Copyright &copy; Your codeLearnersHub 2020</p>
-        </div>
-      </footer>
 
-       <script src="/jquery/jquery.min.js"></script>
-      <script src="/js/bootstrap.js"></script>
-    
-      <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+  <footer class="fixed-bottom bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your codeLearnersHub 2020</p>
+    </div>
+  </footer>
+
+
+  <script src="/js/bootstrap.js"></script>
+
+  <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>-->
-    </body>
+</body>
+
 </html>

@@ -78,5 +78,14 @@ router.get('/users/login', function(req, res)
             }
         }
     }); 
+    
+router.get('/logout', (req, res) => {
+    if(req.session.userid) {
+        delete req.session.userid;
+        res.redirect('/login');
+    } else {
+        res.redirect('/');
+    }        
+});
         
 module.exports = router;

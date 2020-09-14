@@ -1,11 +1,15 @@
-
 body {
   padding-top: 56px;
-  background-image:url('/images/bg_img_4.png');
-  background-repeat: no-repeat;
-  background-size:100%;
 }
-
+.bg-img{
+  background-image:url('/images/bg_img_4.png');
+  background-size :cover;
+  background-attachment: fixed;
+}
+ .bkflight{
+   margin:auto;
+   align-self: center;
+}
 
 .carousel-item {
   height: 65vh;

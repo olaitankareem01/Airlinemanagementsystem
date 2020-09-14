@@ -28,7 +28,7 @@ class FlightManager
         return result;
            }
 
- async create(flightno,takeoffpoint, takeofftime,landingpoint,aircraft_id){
+ async create(flightno,takeoffpoint, takeofftime,landingpoint,aircraft_id,price){
         let findquery = `SELECT aircraft.aircraftno FROM aircraft INNER JOIN flights ON flights.aircraft_id = aircraft.ID WHERE aircraft.ID = ${aircraft_id}`;
         let result = await connection.query(findquery);
        if (result == null){
@@ -36,7 +36,7 @@ class FlightManager
              return;      
        }
        else {
-        let insertQuery = `INSERT INTO flights (flightno,takeoffpoint,takeofftime,landingpoint,aircraft_id) VALUES(${flightno},'${takeoffpoint}', '${takeofftime}','${landingpoint}',${aircraft_id})`;
+        let insertQuery = `INSERT INTO flights (flightno,takeoffpoint,takeofftime,landingpoint,aircraft_id,price) VALUES(${flightno},'${takeoffpoint}', '${takeofftime}','${landingpoint}',${aircraft_id},'${price}')`;
         connection.query(insertQuery);
         }
  }
@@ -44,7 +44,7 @@ class FlightManager
     update(ID,flightno, takeoffpoint, takeofftime,landingpoint,aircraft_id)
     {
         
-         let updateQuery = `UPDATE flights SET flightno=${flightno}, takeoffpoint='${takeoffpoint}',takeofftime='${takeofftime}',landingpoint='${landingpoint}',aircraft_id =${aircraft_id} WHERE ID = ${ID}`;
+         let updateQuery = `UPDATE flights SET flightno=${flightno}, takeoffpoint='${takeoffpoint}',takeofftime='${takeofftime}',landingpoint='${landingpoint}',aircraft_id =${aircraft_id},price='${price}' WHERE ID = ${ID}`;
         connection.query(updateQuery);
          
     }
